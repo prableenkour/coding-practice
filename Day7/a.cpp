@@ -43,7 +43,19 @@ void addatmiddle(Node* head,int val,int pos)
     }
     head->next=new Node(val);
 }
+void deleteFirst(Node*& head) {
+    if (head == nullptr)
+        return;
 
+    Node* temp = head;
+    head = head->next;
+    delete temp;
+}
+void deleteAtEnd(Node* &head)
+{
+    if(head==nullptr) return;
+    Node *cur;
+}
 int main(){
 
     Node* head = new Node(5);
